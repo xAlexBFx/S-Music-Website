@@ -4,8 +4,10 @@ An AI based music application.
 
 ## Features
 
-- High security & encrypted data
+- High security & encrypted data.
 - AI friend who understands music and tastes more than yourself.
+- A total reactive app based in emotions, songs and enviroments.
+- Minimalistic, Modern & simple design.
 
 ## Installation
 ```bash
