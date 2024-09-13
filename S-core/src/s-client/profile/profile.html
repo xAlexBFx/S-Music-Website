@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./profile.css">
+    <link rel="stylesheet" href="../general/general.css">
+    <title>S | Profile</title>
+</head>
+<body>
+    <section class="modal-section">
+        <div class="edit-section modal-card">
+            <section class="user-form-section">
+                <div class="form-left">
+                        <h2>Update your public data as you want...</h2>
+                    <div>
+                        <label class="input-label" for="usernameInput"><i class='bx bx-edit-alt'></i> Current Username</label>
+                        <input name="username" class="form-input" id="usernameInput" type="text" placeholder="New Username" autocapitalize="off" spellcheck="false">
+                        <p class="input-message-p"></p>
+                    </div>
+                    <div>
+                        <label class="input-label" for="role"><i class='bx bx-edit-alt'></i> Current Role</label>
+                        <input name="role" class="form-input" id="role" type="text" placeholder="New Role" autocapitalize="off" spellcheck="false" value="Coder">
+                        <p class="input-message-p"></p>
+                    </div>
+                    <div>
+                        <label for="presentationInput" class="presentation-input-label"><i class='bx bxs-image-add'></i>Select A New Presentation Image</label>
+                        <input id="presentationInput" name="presentation-image" class="file-input" type="file" accept="image/*">
+                    </div>
+                </div>
+                <div class="form-right">
+                    <div class="user-img-preview-c">
+                        <img src="https://static.vecteezy.com/system/resources/previews/023/465/800/original/remove-contact-dark-mode-glyph-ui-icon-delete-unwanted-user-address-book-user-interface-design-white-silhouette-symbol-on-black-space-solid-pictogram-for-web-mobile-isolated-illustration-vector.jpg" alt="User profile image" loading="lazy">
+                        <div class="user-img-window">
+                            <label for="profileImageInput" class="image-input-label"><i class='bx bxs-image-add'></i>Select A New Profile Picture</label>
+                            <input id="profileImageInput" name="profile-image" class="file-input" type="file" accept="image/*">
+                        </div>
+                    </div>
+                    <div class="textarea-c">
+                        <label class="input-label" for="description"><i class='bx bx-edit-alt'></i> Your Description</label>
+                        <textarea class="form-input textarea-input" name="description" id="description" placeholder="New Description" autocapitalize="off" spellcheck="false">I do not have a description</textarea>
+                        <p class="input-message-p"></p>
+                    </div>
+                </div>
+            </section>
+            <div class="modal-footer">
+                <button class="negative-button" onclick="closeModal('edit')">Cancel</button>
+                <button class="positive-button" onclick="updateProfileData()">Save</button>
+            </div>
+        </div>
+
+
+        <div class="logout-alert modal-card">
+            <div>
+                <h1>Are you Sure?</h1>
+                <h3>Confirming will log you out of your account</h3>
+            </div>
+            <div class="modal-footer">
+                <button class="negative-button" onclick="closeModal('logout')">Cancel</button>
+                <button class="positive-button" onclick="logout()">Logout</button>
+            </div>
+        </div>
+
+    </section>
+    <aside class="sidebar">
+        <section class="sidebar-section">
+            <h2>For You</h2>
+            <a class="sidebar-a" href="/feed"><i class='bx bxs-dashboard'></i> Feed</a>
+            <a class="sidebar-a" href=""><i class='bx bxs-playlist'></i> Playlists</a>
+            <a class="sidebar-a" href=""><i class='bx bx-stats'></i> Statistics</a>
+        </section>
+        <section class="sidebar-section">
+            <h2>Your Music</h2>
+            <a class="sidebar-a" href=""><i class='bx bx-heart'></i> Favorites</a>
+            <a class="sidebar-a" href=""><i class='bx bx-time'></i> Listen Later</a>
+            <a class="sidebar-a" href=""><i class='bx bx-calendar'></i> History</a>
+            <a class="sidebar-a" href=""><i class='bx bx-podcast'></i> Podcasts</a>
+        </section>
+        <section class="sidebar-section emotions">
+            <h2>Your Feelings</h2>
+            <a class="sidebar-a" href=""><span class="circle-span emotion-1"></span> Happy</a>
+            <a class="sidebar-a" href=""><span class="circle-span emotion-2"></span> Love</a>
+            <a class="sidebar-a" href=""><span class="circle-span emotion-3"></span> Sad</a>
+            <a class="sidebar-a" href=""><span class="circle-span emotion-4"></span> Courage</a>
+        </section>
+    </aside>
+
+    <main class="main">
+        <header class="presentation">
+            <img src="https://i1.sndcdn.com/visuals-000082001451-u9TvPZ-t1240x260.jpg" alt="User Presentation Image" loading="lazy">
+        </header>
+        <section class="user-section">
+            <section class="user-section-top">
+                <div class="user-img-c-base">
+                    <div class="user-img-c">
+                        <img id="userImage" src="https://static.vecteezy.com/system/resources/previews/023/465/800/original/remove-contact-dark-mode-glyph-ui-icon-delete-unwanted-user-address-book-user-interface-design-white-silhouette-symbol-on-black-space-solid-pictogram-for-web-mobile-isolated-illustration-vector.jpg" alt="User profile Image" loading="lazy">
+                    </div>
+                </div>
+                <div class="top-left">
+                    <h1 id="userNameH1">AlexDev_Official</h1>
+                    <p>Coder</p>
+                </div>
+                <div class="top-right">
+                    <button class="edit-button" onclick="dropModal('edit')">Edit</button>
+                    <button class="logout-button"onclick="dropModal('logout')">Logout</button>
+                </div>
+            </section>
+            <div class="user-data-tab">
+                <div>
+                    <h1>Followers</h1>
+                    <h3>1.7M</h3>
+                </div>
+
+                <div>
+                    <h1>Likes</h1>
+                    <h3>17.1M</h3>
+                </div>
+
+                <div>
+                    <h1>Songs</h1>
+                    <h3>107</h3>
+                </div>
+
+                <div>
+                    <h1>Playlists</h1>
+                    <h3>17</h3>
+                </div>
+            </div>
+            <div class="recommended-from-user">
+                <div class="recommended-from-user-top">
+                    <h3>Recommended from AlexDev_Official</h3>
+                </div>
+                <div class="recommended-from-user-content">
+
+                    <div class="recommended-card">
+                        <div class="card-section">
+                            <div>
+                                <img src="https://cdns-images.dzcdn.net/images/cover/055dc1c139e2333912313af7a7ca9e76/1900x1900-000000-80-0-0.jpg" alt="playlist Logo" loading="lazy">
+                            </div>
+                            <h3>Tony Ann Yellow</h3>
+                        </div>
+                        <div class="card-section">
+                            <p>15 Tracks &middot; 1h 27m</p>
+                            <p>23 June 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="recommended-card">
+                        <div class="card-section">
+                            <div>
+                                <img src="https://cdns-images.dzcdn.net/images/cover/055dc1c139e2333912313af7a7ca9e76/1900x1900-000000-80-0-0.jpg" alt="playlist Logo" loading="lazy">
+                            </div>
+                            <h3>Tony Ann Yellow</h3>
+                        </div>
+                        <div class="card-section">
+                            <p>15 Tracks &middot; 1h 27m</p>
+                            <p>23 June 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="recommended-card">
+                        <div class="card-section">
+                            <div>
+                                <img src="https://cdns-images.dzcdn.net/images/cover/055dc1c139e2333912313af7a7ca9e76/1900x1900-000000-80-0-0.jpg" alt="playlist Logo" loading="lazy">
+                            </div>
+                            <h3>Tony Ann Yellow</h3>
+                        </div>
+                        <div class="card-section">
+                            <p>15 Tracks &middot; 1h 27m</p>
+                            <p>23 June 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="recommended-card">
+                        <div class="card-section">
+                            <div>
+                                <img src="https://cdns-images.dzcdn.net/images/cover/055dc1c139e2333912313af7a7ca9e76/1900x1900-000000-80-0-0.jpg" alt="playlist Logo" loading="lazy">
+                            </div>
+                            <h3>Tony Ann Yellow</h3>
+                        </div>
+                        <div class="card-section">
+                            <p>15 Tracks &middot; 1h 27m</p>
+                            <p>23 June 2024</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <nav class="main-nav">
+            <button class="main-nav-button main-nav-button-active" id="mainNavRecommendedButton" onclick="changeMainSection('recommended', 'Recommended')">Recommended</button>
+            <button class="main-nav-button" id="mainNavSongsButton" onclick="changeMainSection('songs', 'Songs')">Songs</button>
+            <button class="main-nav-button" id="mainNavPlaylistsButton" onclick="changeMainSection('playlists', 'Playlists')">Playlists</button>
+            <button class="main-nav-button" id="mainNavAlbumsButton" onclick="changeMainSection('albums', 'Albums')">Albums</button>
+            <button class="main-nav-button" id="mainNavFavoritesButton" onclick="changeMainSection('favorites', 'Favorites')">Favorites</button>
+        </nav>
+
+        <section class="feed-section recommended-section">
+        </section>
+
+        <section class="feed-section songs-section">
+        </section>
+
+        <section class="feed-section playlists-section">
+        </section>
+
+        <section class="feed-section albums-section">
+        </section>
+
+        <section class="feed-section favorites-section">
+        </section>
+
+    </main>
+    <section class="music-fast-controller">
+        <div class="controller-info">
+            <img src="https://i.scdn.co/image/ab67616d0000b273a65cb5faea05ebcda9cf2b83" alt="Music Photo" loading="lazy">
+            <div>
+                <h3>Time</h3>
+                <p>By: Tony ann</p>
+            </div>
+        </div>
+        <div class="controller-controllers">
+            <i class='bx bx-rewind'></i>
+            <i class='bx bx-play'></i>
+            <i class='bx bx-fast-forward'></i>
+            <i class='bx bxs-heart'></i>
+            <i class='bx bx-heart'></i>
+        </div>
+        <div class="controller-progress-bar-c">
+            <input class="progress-bar" type="range" id="musicProgressSlider"  min="0" max="600" value="210">
+            <p>1:15 / 2:30</p>
+        </div>
+        <div class="extra-settings-c">
+            <i class='bx bx-volume-full'></i>
+            <input class="volume-bar" type="range" id="volumeSlider"  min="0" max="100" value="100">
+            <i class='bx bx-repost'></i>
+            <i class='bx bxs-playlist'></i>
+        </div>
+    </section>
+    <script type="module" src="./profile.js"></script>
+    <script type="module" src="../general/general.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../general/general.css">
+    <link rel="stylesheet" href="./feed.css">
+    <title>S | Feed</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-center-container" id="headerCenterContainer">
+            <input class="search-bar" id="searchBar" type="text" placeholder="Search by song, album or artist." autocapitalize="off" autocomplete="off" spellcheck="false">
+            <div id="searchBarIconContainer" class="search-bar-i-container">
+                <i class='bx bx-search-alt-2'></i>
+            </div>
+            <div class="searcher-c" id="searcherContainer">
+                <div>
+                    <h3>Search Example</h3>
+                </div>
+                <div>
+                    <h3>Search Example</h3>
+                </div>
+                <div>
+                    <h3>Search Example</h3>
+                </div>
+                <div>
+                    <h3>Search Example</h3>
+                </div>
+                <div>
+                    <h3>Search Example</h3>
+                </div>
+                <div>
+                    <h3>Search Example</h3>
+                </div>
+                <div>
+                    <h3>Search Example</h3>
+                </div>
+                <div>
+                    <h3>Search Example</h3>
+                </div>
+                <div>
+                    <h3>Search Example</h3>
+                </div>
+                <div>
+                    <h3>Search Example</h3>
+                </div>
+            </div>
+        </div>
+        <div class="header-right-container">
+            <a href="/settings"><i class='bx bx-cog'></i></a>
+            <button id="userImageContainer" class="img-container">
+                <img src="https://static.vecteezy.com/system/resources/previews/023/465/800/original/remove-contact-dark-mode-glyph-ui-icon-delete-unwanted-user-address-book-user-interface-design-white-silhouette-symbol-on-black-space-solid-pictogram-for-web-mobile-isolated-illustration-vector.jpg" alt="User Photo" loading="lazy">
+            </button>
+        </div>
+    </header>
+    <aside class="sidebar">
+        <section class="sidebar-section">
+            <h2>For You</h2>
+            <a class="sidebar-a active-link" href="/feed"><i class='bx bxs-dashboard'></i> Feed</a>
+            <a class="sidebar-a" href=""><i class='bx bxs-playlist'></i> Playlists</a>
+            <a class="sidebar-a" href=""><i class='bx bx-stats'></i> Statistics</a>
+        </section>
+        <section class="sidebar-section">
+            <h2>Your Music</h2>
+            <a class="sidebar-a" href=""><i class='bx bx-heart'></i> Favorites</a>
+            <a class="sidebar-a" href=""><i class='bx bx-time'></i> Listen Later</a>
+            <a class="sidebar-a" href=""><i class='bx bx-calendar'></i> History</a>
+            <a class="sidebar-a" href=""><i class='bx bx-podcast'></i> Podcasts</a>
+        </section>
+        <section class="sidebar-section emotions">
+            <h2>Your Feelings</h2>
+            <a class="sidebar-a" href=""><span class="circle-span emotion-1"></span> Happy</a>
+            <a class="sidebar-a" href=""><span class="circle-span emotion-2"></span> Love</a>
+            <a class="sidebar-a" href=""><span class="circle-span emotion-3"></span> Sad</a>
+            <a class="sidebar-a" href=""><span class="circle-span emotion-4"></span> Courage</a>
+        </section>
+    </aside>
+
+    <main class="main">
+        <section class="main-top">
+            <div id="top-playlists-presentation" class="top-presentation">
+                <p><i class='bx bx-music'></i> Tracks &middot; 1 hour 07 minutes</p>
+                <h1>Playlist of the day</h1>
+                <div>
+                    <img src="https://media.pitchfork.com/photos/63f641d801dbe796fab80055/master/pass/Daft-Punk-Random-Access-Memories.jpg" alt="Playlist logo" loading="lazy">
+                </div>
+            </div>
+
+            <div id="most-recommended-presentation" class="top-presentation">
+                <p><i class='bx bx-happy-alt'></i> Most Recommended &middot; Happy Feeling</p>
+                <h1>Most recommended</h1>
+                <div>
+                    <img src="https://cdns-images.dzcdn.net/images/cover/055dc1c139e2333912313af7a7ca9e76/1900x1900-000000-80-0-0.jpg" alt="Music Logo" loading="lazy">
+                </div>
+            </div>
+        </section>
+        <nav class="main-nav">
+            <button class="main-nav-button main-nav-button-active" id="mainNavRecommendedButton" onclick="changeMainSection('recommended', 'Recommended')">Recommended</button>
+            <button class="main-nav-button" id="mainNavPlaylistsButton" onclick="changeMainSection('playlists', 'Playlists')">Playlists</button>
+            <button class="main-nav-button" id="mainNavArtistsButton" onclick="changeMainSection('artists', 'Artists')">Artist</button>
+            <button class="main-nav-button" id="mainNavAlbumsButton" onclick="changeMainSection('albums', 'Albums')">Albums</button>
+            <button class="main-nav-button" id="mainNavStreamsButton" onclick="changeMainSection('streams', 'Streams')">Streams</button>
+            <button class="main-nav-button" id="mainNavFPButton" onclick="changeMainSection('friends-playlists', 'FP')">Friends` Playlists</button>
+        </nav>
+        <section class="feed-section recommended-section">
+        </section>
+
+
+        <section class="feed-section playlists-section">
+            <div class="playlist-card">
+                <div class="card-section">
+                    <div>
+                        <img src="https://cdns-images.dzcdn.net/images/cover/055dc1c139e2333912313af7a7ca9e76/1900x1900-000000-80-0-0.jpg" alt="playlist Logo" loading="lazy">
+                    </div>
+                    <h3>Tony Ann Yellow</h3>
+                </div>
+                <div class="card-section">
+                    <p>15 Tracks &middot; 1h 27m</p>
+                    <p>23 June 2024</p>
+                </div>
+                <div class="card-section">
+                    <i class='bx bx-time'></i>
+                    <i class='bx bx-play'></i>
+                    <i class='bx bx-dots-vertical-rounded'></i>
+                </div>
+            </div>
+            </div>
+            <div class="playlist-card">
+                <div class="card-section">
+                    <div>
+                        <img src="https://umusic-canada.umg-wp3.com/wp-content/uploads/2023/01/image013.png" alt="Playlist Logo" loading="lazy">
+                    </div>
+                    <h3>Tony Ann Blue</h3>
+                </div>
+                <div class="card-section">
+                    <p>11 Tracks &middot; 0h 30m</p>
+                    <p>31 december 2023</p>
+                </div>
+                <div class="card-section">
+                    <i class='bx bx-time'></i>
+                    <i class='bx bx-play'></i>
+                    <i class='bx bx-dots-vertical-rounded'></i>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="feed-section artists-section">
+        </section>
+
+        <section class="feed-section albums-section">
+        </section>
+
+        <section class="feed-section streams-section">
+        </section>
+
+        <section class="feed-section friends-playlists-section">
+        </section>
+    </main>
+    <section class="music-fast-controller">
+        <div class="controller-info">
+            <img src="https://i.scdn.co/image/ab67616d0000b273a65cb5faea05ebcda9cf2b83" alt="Music Photo" loading="lazy">
+            <div>
+                <h3>Time</h3>
+                <p>By: Tony ann</p>
+            </div>
+        </div>
+        <div class="controller-controllers">
+            <i class='bx bx-rewind'></i>
+            <i class='bx bx-play'></i>
+            <i class='bx bx-fast-forward'></i>
+            <i class='bx bxs-heart'></i>
+            <i class='bx bx-heart'></i>
+        </div>
+        <div class="controller-progress-bar-c">
+            <input class="progress-bar" type="range" id="musicProgressSlider"  min="0" max="600" value="210">
+            <p>1:15 / 2:30</p>
+        </div>
+        <div class="extra-settings-c">
+            <i class='bx bx-volume-full'></i>
+            <input class="volume-bar" type="range" id="volumeSlider"  min="0" max="100" value="100">
+            <i class='bx bx-repost'></i>
+            <i class='bx bxs-playlist'></i>
+        </div>
+    </section>
+    <script type="module" src="./feed.js"></script>
+    <script type="module" src="../general/general.js"></script>
+</body>
+</html>

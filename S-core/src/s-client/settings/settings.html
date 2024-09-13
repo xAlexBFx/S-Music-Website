@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./settings.css">
+    <link rel="stylesheet" href="../general/general.css">
+    <title>S | Settings</title>
+</head>
+<body>
+    <section class="save-alert-modal">
+        <div class="save-alert-container">
+            <button id="modalExitButton" class="modal-exit-button"><i class='bx bx-x'></i></button>
+            <h1>Would you want to save your new settings?</h1>
+            <div class="difference-list">
+                Difference list:
+                <div class="difference-card">
+                    <h3>App theme to: Dark Mode</h3>
+                    <button>
+                        <i class='bx bx-trash'></i>
+                    </button>
+                </div>
+
+                <div class="difference-card">
+                    <h3>App theme to: Dark Mode</h3>
+                    <button>
+                        <i class='bx bx-trash'></i>
+                    </button>
+                </div>
+
+                <div class="difference-card">
+                    <h3>App theme to: Dark Mode</h3>
+                    <button>
+                        <i class='bx bx-trash'></i>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-buttons-c">
+                <button class="negative-button" onclick="doNotSaveSettings()">Do not</button>
+                <button class="positive-button" onclick="saveSettings()">Save</button>
+            </div>
+        </div>
+    </section>
+    <div class="back-button-c">
+        <button id="backButton"><i class='bx bx-chevron-left'></i></button>
+    </div>
+    <aside class="settings-sidebar">
+        <div class="dropdown-section">
+            <button class="settings-sidebar-button" onclick="toggleDropdown(this)">General</button>
+            <div class="content">
+                <button class="settings-sidebar-button-in-section" onclick="scrollToSection('wifi')">Wifi</button>
+                <button class="settings-sidebar-button-in-section" onclick="scrollToSection('audio')">Audio</button>
+            </div>
+        </div>
+        <div class="dropdown-section">
+            <button class="settings-sidebar-button" onclick="toggleDropdown(this)">Media</button>
+            <div class="content">
+                <button class="settings-sidebar-button-in-section" onclick="scrollToSection('dataSharing')">Data sharing</button>
+                <button class="settings-sidebar-button-in-section" onclick="scrollToSection('audioOutput')">Audio output</button>
+            </div>
+        </div>
+
+        <div class="dropdown-section">
+            <button class="settings-sidebar-button" onclick="toggleDropdown(this)">Reproduction</button>
+            <div class="content">
+                <button class="settings-sidebar-button-in-section" onclick="scrollToSection('dataSharing')">AI Services</button>
+                <button class="settings-sidebar-button-in-section" onclick="scrollToSection('audioOutput')">Subtitles</button>
+            </div>
+        </div>
+    </aside>
+    <main class="main">
+        <section class="main-top">
+            <div id="searcherBase" class="searcher-c-base">
+                <input class="search-bar" id="searchBar" type="text" placeholder="Search Settings" autocapitalize="off" autocomplete="off" spellcheck="false">
+                <div id="searchBarIconContainer" class="search-bar-i-container">
+                    <i class='bx bx-search-alt-2'></i>
+                </div>
+                <div class="searcher-c" id="searcherContainer">
+                    <div>
+                        <h3>Search Example</h3>
+                    </div>
+                    <div>
+                        <h3>Search Example</h3>
+                    </div>
+                    <div>
+                        <h3>Search Example</h3>
+                    </div>
+                    <div>
+                        <h3>Search Example</h3>
+                    </div>
+                    <div>
+                        <h3>Search Example</h3>
+                    </div>
+                    <div>
+                        <h3>Search Example</h3>
+                    </div>
+                    <div>
+                        <h3>Search Example</h3>
+                    </div>
+                    <div>
+                        <h3>Search Example</h3>
+                    </div>
+                    <div>
+                        <h3>Search Example</h3>
+                    </div>
+                    <div>
+                        <h3>Search Example</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="section-header-div">
+            <h1>Quick Settings</h1>
+        </div>
+        <section class= "settings-types-section">
+            <div class="setting-card">
+                <div class="card-icon-div">
+                    <i class='bx bx-cog'></i>
+                </div>
+                <div class="card-info-div">
+                    <h3>Change App theme</h3>
+                    <p>Dark/Light</p>
+                </div>
+            </div>
+            <div class="setting-card">
+                <div class="card-icon-div">
+                    <i class='bx bx-chat'></i>
+                </div>
+                <div class="card-info-div">
+                    <h3>Change Language</h3>
+                    <p>English</p>
+                </div>
+            </div>
+        </section>
+        <div class="section-header-div">
+            <h1>Settings</h1>
+        </div>
+        <section class= "main-settings-list">
+            <div class="settings-list-card">
+                <div class="settings-list-card-icon-div">
+                    <i class='bx bx-cog'></i>
+                </div>
+                <div class="settings-list-card-info-div">
+                    <h3>General Settings</h3>
+                    <p>Wifi, audio...</p>
+                </div>
+            </div>
+
+            <div class="settings-list-card">
+                <div class="settings-list-card-icon-div">
+                    <i class='bx bx-share-alt'></i>
+                </div>
+                <div class="settings-list-card-info-div">
+                    <h3>Media Settings</h3>
+                    <p>Data sharing, audio output...</p>
+                </div>
+            </div>
+
+            <div class="settings-list-card">
+                <div class="settings-list-card-icon-div">
+                    <i class='bx bx-headphone'></i>
+                </div>
+                <div class="settings-list-card-info-div">
+                    <h3>Reproduction Settings</h3>
+                    <p>AI, Subtitles...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="music-fast-controller">
+        <div class="controller-info">
+            <img src="https://i.scdn.co/image/ab67616d0000b273a65cb5faea05ebcda9cf2b83" alt="Music Photo" loading="lazy">
+            <div>
+                <h3>Time</h3>
+                <p>By: Tony ann</p>
+            </div>
+        </div>
+        <div class="controller-controllers">
+            <i class='bx bx-rewind'></i>
+            <i class='bx bx-play'></i>
+            <i class='bx bx-fast-forward'></i>
+            <i class='bx bxs-heart'></i>
+            <i class='bx bx-heart'></i>
+        </div>
+        <div class="controller-progress-bar-c">
+            <input class="progress-bar" type="range" id="musicProgressSlider"  min="0" max="600" value="210">
+            <p>1:15 / 2:30</p>
+        </div>
+        <div class="extra-settings-c">
+            <i class='bx bx-volume-full'></i>
+            <input class="volume-bar" type="range" id="volumeSlider"  min="0" max="100" value="100">
+            <i class='bx bx-repost'></i>
+            <i class='bx bxs-playlist'></i>
+        </div>
+    </section>
+    <script type="module" src="./settings.js"></script>
+    <script type="module" src="../general/general.js"></script>
+</body>
+</html>

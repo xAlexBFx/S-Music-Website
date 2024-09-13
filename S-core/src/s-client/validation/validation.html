@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../general/general.css">
+    <link rel="stylesheet" href="./validation.css">
+    <title>S | Validation</title>
+</head>
+<body>
+    <div class="container">
+        <section class="card">
+            <div class="form-section">
+                <div class="form-top">
+                    <h1>Validate Your Email</h1>
+                    <h3>We will send you a code to your email <h2 class="orange-text" id="userEmailText"></h2></h3>
+                </div>
+                    <form id="form" class="form-c">
+                        <div id="codeForm">
+                            <input class="form-input" id="code1" type="number" maxlength="1" pattern="[0-9]" required>
+                            <input class="form-input" id="code2" type="number" maxlength="1" pattern="[0-9]" required>
+                            <input class="form-input" id="code3" type="number" maxlength="1" pattern="[0-9]" required>
+                            <input class="form-input" id="code4" type="number" maxlength="1" pattern="[0-9]" required>
+                            <input class="form-input" id="code5" type="number" maxlength="1" pattern="[0-9]" required>
+                            <input class="form-input" id="code6" type="number" maxlength="1" pattern="[0-9]" required>
+                        </div>
+                        <p id="messageParagraph" class="input-message-p"></p>
+                        <button class="form-button" type="submit">Verify</button>
+                        <div>
+                        </div>
+                    </form>
+                    <div class="form-bottom">
+                        <p>Wrong Email?</p>
+                        <a href="/register">Change Email</a>
+                    </div>
+        </section>
+    </div>
+    <script type="module" src="./validation.js"></script>
+</body>
+</html>

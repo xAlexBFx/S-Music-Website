@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../general/general.css">
+    <link rel="stylesheet" href="./register.css">
+    <title>S | Register</title>
+</head>
+<body>
+    <div class="container">
+        <section class="card">
+            <div class="form-section">
+                <div class="form-top">
+                    <h1>Welcome To S Services</h1>
+                    <h3>First time? Well, This is the best music website with a full & free AI service</h3>
+                    <p>Be my priority by creating an account!</p>
+                </div>
+                <div class="form-base">
+                    <form id="form" class="form-c">
+                        <div>
+                            <label class="input-label" for="username">* New Username</label>
+                            <input name="username" class="form-input" id="username" type="text" placeholder="New Username" autocapitalize="off" autocomplete="username" spellcheck="false" required>
+                            <p class="input-message-p"></p>
+                        </div>
+                        <div>
+                            <label class="input-label" for="email">* Your Email</label>
+                            <input name="email" class="form-input" id="email" type="text" placeholder="Email" autocapitalize="off" autocomplete="email" spellcheck="false" required>
+                            <p class="input-message-p"></p>
+                        </div>
+                        <div>
+                            <label class="input-label" for="password">* Password</label>
+                            <input name="password" class="form-input" id="password" type="password" placeholder="Password" autocapitalize="off" autocomplete="current-password" spellcheck="false" required>
+                            <p class="input-message-p"></p>
+                        </div>
+                        <div>
+                            <label class="input-label" for="rePassword">* Confirm Password</label>
+                            <input class="form-input" id="rePassword" type="password" placeholder="Confirm Password" autocapitalize="off" autocomplete="off" spellcheck="false" required>
+                            <p class="input-message-p"></p>
+                        </div>
+                        <button id="formButton" class="form-button" type="submit">Next</button>
+                    </form>
+                    <div class="progress-bar">
+                    </div>
+                </div>
+                <div class="form-bottom">
+                    <p>My priority already?</p>
+                    <a href="/login">Log in</a>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="https://cdns-images.dzcdn.net/images/cover/055dc1c139e2333912313af7a7ca9e76/1900x1900-000000-80-0-0.jpg" alt="">
+            </div>
+        </section>
+    </div>
+    <script type="module" src="./register.js"></script>
+</body>
+</html>

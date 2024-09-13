@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../general/general.css">
+    <link rel="stylesheet" href="./login.css">
+    <title>S | login</title>
+</head>
+<body>
+    <div class="container">
+        <section class="card">
+            <div class="form-section">
+                <div class="form-top">
+                    <h1>Welcome Back To S Services</h1>
+                    <h3>Best music website with a full & free AI service</h3>
+                    <p>You already know this... wait, Are you my priority?</p>
+                </div>
+                <form id="form" class="form-c">
+                    <div>
+                        <label class="input-label" for="identification">Email or Username</label>
+                        <input name="identification" class="form-input" id="identification" type="text" placeholder="Email or Username" autocapitalize="off" autocomplete="email" spellcheck="false" required>
+                        <p class="input-message-p"></p>
+                    </div>
+                    <div>
+                        <label class="input-label" for="password">Password</label>
+                        <input name="password" class="form-input" id="password" type="password" placeholder="Password" autocapitalize="off" autocomplete="current-password" spellcheck="false" required>
+                        <p class="input-message-p"></p>
+                    </div>
+                    <button class="form-button" type="submit">Login</button>
+                </form>
+                <div class="form-bottom">
+                    <p>Not my priority yet?</p>
+                    <a href="/register">Become My Priority</a>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="https://cdns-images.dzcdn.net/images/cover/055dc1c139e2333912313af7a7ca9e76/1900x1900-000000-80-0-0.jpg" alt="">
+            </div>
+        </section>
+    </div>
+    <script type="module" src="./login.js"></script>
+</body>
+</html>
