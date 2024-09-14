@@ -8,6 +8,7 @@ An AI based music application.
 - AI friend who understands music and tastes more than yourself.
 - A total reactive app based in emotions, songs and enviroments.
 - Minimalistic, Modern & simple design.
+- Database, API & Frontend included.
 
 ## Installation
 ```bash
