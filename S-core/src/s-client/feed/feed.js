@@ -9,6 +9,8 @@ let currentMainButton = 'Recommended';
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    renderUserData()
+
     headerCenterContainer.addEventListener('click', function() {
         searchBarInput.focus();
     });
@@ -43,6 +45,15 @@ const changeMainSection = (section, buttonId) => {
     document.querySelector(`.${currentMainSection}-section`).style.display = 'none';
     document.querySelector(`.${section}-section`).style.display = 'flex';
     currentMainSection = section;
+}
+
+const renderUserData = () => {
+    const userData = localStorage.getItem('user');
+    const userDataObj = userData ? JSON.parse(userData) : {}; 
+    const profileImageElement = document.getElementById('profileImageElement')
+
+    if(userDataObj.profileImage) profileImageElement.src = userDataObj.profileImage.imageUrl;
+    if(!userDataObj.profileImage) profileImageElement.src = 'https://static.vecteezy.com/system/resources/previews/023/465/800/original/remove-contact-dark-mode-glyph-ui-icon-delete-unwanted-user-address-book-user-interface-design-white-silhouette-symbol-on-black-space-solid-pictogram-for-web-mobile-isolated-illustration-vector.jpg';
 }
 
 window.changeMainSection = changeMainSection;

@@ -10,7 +10,13 @@ export const profileSchema = z.object({
     description: z.string({
         invalid_type_error: 'Invalid username'
     }).optional(),
-});
+    profileImage: z.object({
+        
+    }).optional(),
+    presentationImage: z.object({
+        
+    }).optional(),
+}).strict();
 
 export const settingsSchema = z.object({
     settings: z.object({
@@ -18,5 +24,5 @@ export const settingsSchema = z.object({
             invalid_type_error: 'Invalid app language!'
         }).optional()
     }).strict()
-});
+}).strict();
 

@@ -156,6 +156,55 @@
     scale: 1.1;
 }
 
+.plus-a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    font-size: var(--icon-size);
+    color: var(--first-color);
+    font-weight: 100;
+    border-radius: 50%;
+    border: 1px var(--first-color) solid;
+    padding: 5px;
+    margin-right: 10px;
+    transition: scale var(--transition-time) ease;
+}
+
+.plus-a:hover::after {
+    display: flex;
+}
+
+.plus-a::after {
+    content: "Upload A New Sound";
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    bottom: -45px;
+    left: -100%;
+    width: max-content;
+    height: 20px;
+    border-radius: var(--border-radius);
+    background-color: var(--light-background-color);
+    font-size: var(--small-size);
+    color: var(--normal-font-color);
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 4px;
+    text-align: center;
+    user-select: none;
+    cursor: default;
+}
+
+.plus-a:active {
+    scale: 0.90;
+}
+
 .main {
     top: 65px;
 }

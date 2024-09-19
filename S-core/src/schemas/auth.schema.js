@@ -18,11 +18,11 @@ export const registerSchema = z.object({
     .min(6, {
         message: 'The password must be at least 6 characters'
     }),
-});
+}).strict();
 
 export const emailCodeSchema = z.object({
     code: z.string().regex(/^\d{6}$/, { message: 'The code must be exactly 6 digits' })
-});
+}).strict();
 
 export const loginSchema = z.object({
     identification: z.string({
@@ -37,4 +37,4 @@ export const loginSchema = z.object({
     .min(6, {
         message: 'Your password must have 6 characters'
     })
-});
+}).strict();

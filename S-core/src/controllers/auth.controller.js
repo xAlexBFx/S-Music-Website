@@ -39,6 +39,8 @@ export const register = async (req, res) => {
                 'user': {
                     'username': savedUser.username,
                     'email': savedUser.email,
+                    'description': foundUser.description,
+                    'role': foundUser.role,
                     'id': savedUser._id,
                     'settings': savedUser.settings,
                     'createdAt': savedUser.createdAt,
@@ -100,6 +102,10 @@ export const login = async (req, res) => {
                 'user': {
                     'username': foundUser.username,
                     'email': foundUser.email,
+                    'description': foundUser.description,
+                    'role': foundUser.role,
+                    'profileImage': foundUser.profileImage,
+                    'presentationImage': foundUser.presentationImage,
                     'id': foundUser._id,
                     'settings': foundUser.settings,
                     'createdAt': foundUser.createdAt,

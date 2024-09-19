@@ -30,6 +30,7 @@
     justify-content: center;
     width: 100%;
     height: auto;
+    min-height: 200px;
     max-height: 350px;
     background-color: transparent;
     border-radius: 0 0 var(--border-radius) var(--border-radius);
@@ -62,7 +63,7 @@
     justify-content: space-between;
     flex-direction: row;
     width: 100%;
-    height: 100px;
+    height: 160px;
     padding: 20px;
     gap: 20px;
 }
@@ -101,6 +102,7 @@
 }
 
 .top-left {
+    position: relative;
     display: flex;
     justify-content: start;
     align-items: start;
@@ -110,6 +112,19 @@
     width: auto;
     height: 100%;
 }
+.description-c {
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 50%;
+    height: 100%;
+    text-align: start;
+    max-width: 100%;
+    overflow: hidden;
+}
 
 .top-left h1 {
     font-size: var(--title-size);
@@ -117,6 +132,13 @@
 }
 
 .top-left p {
+    font-size: var(--normal-size);
+    color: var(--inactive-font-color);
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.description-c p {
     font-size: var(--normal-size);
     color: var(--inactive-font-color);
     font-weight: 600;
@@ -166,7 +188,6 @@
 .top-right button:active{
     scale: 0.95;
 }
-
 
 .user-data-tab {
     display: flex;
@@ -448,8 +469,8 @@
     justify-content: space-between;
     flex-direction: column;
     text-align: start;
-    width: 70%;
-    height: 80%;
+    width: 80%;
+    height: 90%;
     background-color: var(--sections-background-color);
     border-radius: var(--border-radius);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -589,14 +610,6 @@
     z-index: 1;
 }
 
-.checked-input {
-    border: 1px solid var(--positive-color);
-}
-
-.issue-input {
-    border: 1px solid var(--negative-color);
-}
-
 .input-message-p {
     display: none;
     position: absolute;
@@ -608,23 +621,6 @@
     z-index: 2;
 }
 
-.issue-message {
-    display: inline;
-    font-size: var(--small-size);
-    color: var(--negative-color);
-}
-
-.form-input:focus {
-    border: 1px solid var(--first-color);
-}
-
-.checked-input:focus {
-    border: 1px solid var(--positive-color);
-}
-
-.issue-input:focus {
-    border: 1px solid var(--negative-color);
-}
 
 .presentation-input-label {
     display: flex;
@@ -656,7 +652,7 @@
 .form-right {
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: space-around;
     flex-direction: column;
     height: 100%;
     width: 40%;
@@ -717,7 +713,7 @@
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    color: var(--first-color);
+    color: var(--normal-font-color);
     font-size: var(--normal-size);
     font-weight: 600;
     padding: 10px;
@@ -732,6 +728,15 @@
     margin-right: 5px;
 }
 
+.profile-paragraph {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: min-content;
+}
+
 .textarea-c {
     position: relative;
     width: 100%;
@@ -743,4 +748,47 @@
 .textarea-input {
     padding: 10px;
     resize: none;
+}
+
+
+.form-input:focus {
+    border: 1px solid var(--first-color);
+}
+
+
+.checked-input {
+    border: 1px solid var(--positive-color);
+}
+
+.issue-input {
+    border: 1px solid var(--negative-color);
+}
+
+
+.checked-message {
+    display: inline;
+    font-size: var(--small-size);
+    color: var(--positive-color);
+}
+
+.issue-message {
+    display: inline;
+    font-size: var(--small-size);
+    color: var(--negative-color);
+}
+
+.checked-input:hover {
+    border: 1px solid var(--positive-color);
+}
+
+.checked-input:focus {
+    border: 1px solid var(--positive-color);
+}
+
+.issue-input:hover {
+    border: 1px solid var(--negative-color);
+}
+
+.issue-input:focus {
+    border: 1px solid var(--negative-color);
 }

@@ -11,7 +11,7 @@
 <body>
     <section class="modal-section">
         <div class="edit-section modal-card">
-            <section class="user-form-section">
+            <form id="editProfileForm" class="user-form-section">
                 <div class="form-left">
                         <h2>Update your public data as you want...</h2>
                     <div>
@@ -20,36 +20,37 @@
                         <p class="input-message-p"></p>
                     </div>
                     <div>
-                        <label class="input-label" for="role"><i class='bx bx-edit-alt'></i> Current Role</label>
-                        <input name="role" class="form-input" id="role" type="text" placeholder="New Role" autocapitalize="off" spellcheck="false" value="Coder">
+                        <label class="input-label" for="roleInput"><i class='bx bx-edit-alt'></i> Current Role</label>
+                        <input name="role" class="form-input" id="roleInput" type="text" placeholder="New Role" autocapitalize="off" spellcheck="false" value="Coder">
                         <p class="input-message-p"></p>
                     </div>
                     <div>
-                        <label for="presentationInput" class="presentation-input-label"><i class='bx bxs-image-add'></i>Select A New Presentation Image</label>
-                        <input id="presentationInput" name="presentation-image" class="file-input" type="file" accept="image/*">
-                    </div>
-                </div>
-                <div class="form-right">
-                    <div class="user-img-preview-c">
-                        <img src="https://static.vecteezy.com/system/resources/previews/023/465/800/original/remove-contact-dark-mode-glyph-ui-icon-delete-unwanted-user-address-book-user-interface-design-white-silhouette-symbol-on-black-space-solid-pictogram-for-web-mobile-isolated-illustration-vector.jpg" alt="User profile image" loading="lazy">
-                        <div class="user-img-window">
-                            <label for="profileImageInput" class="image-input-label"><i class='bx bxs-image-add'></i>Select A New Profile Picture</label>
-                            <input id="profileImageInput" name="profile-image" class="file-input" type="file" accept="image/*">
-                        </div>
-                    </div>
-                    <div class="textarea-c">
-                        <label class="input-label" for="description"><i class='bx bx-edit-alt'></i> Your Description</label>
-                        <textarea class="form-input textarea-input" name="description" id="description" placeholder="New Description" autocapitalize="off" spellcheck="false">I do not have a description</textarea>
+                        <label id="presentationInputLabel" for="presentationImageInput" class="presentation-input-label"><i class='bx bxs-image-add'></i>Select A New Presentation Image</label>
+                        <input id="presentationImageInput" name="presentationImage" class="file-input" type="file" accept="image/*">
                         <p class="input-message-p"></p>
                     </div>
                 </div>
-            </section>
+                <div class="form-right">
+                    <div class="user-img-preview-c" id="profileImagePreviewContainer">
+                        <img src="" alt="User profile image" loading="lazy" id="profileImagePreview">
+                        <div class="user-img-window">
+                            <label id="profileImageInputLabel" for="profileImageInput" class="image-input-label"><i class='bx bxs-image-add'></i>Select A New Profile Picture</label>
+                            <input id="profileImageInput" name="profileImage" class="file-input" type="file" accept="image/*">
+                        </div>
+                    </div>
+                    <div class="textarea-c">
+                        <p id="profileInputErrorParagraph" class="input-message-p profile-paragraph">aaaaaaaaaaaaaaaaaaaa</p>
+                        <label class="input-label" for="descriptionInput"><i class='bx bx-edit-alt'></i> Your Description</label>
+                        <textarea class="form-input textarea-input" name="description" id="descriptionInput" placeholder="New Description" autocapitalize="off" spellcheck="false"></textarea>
+                        <p class="input-message-p"></p>
+                    </div>
+                </div>
+            </form>
             <div class="modal-footer">
-                <button class="negative-button" onclick="closeModal('edit')">Cancel</button>
-                <button class="positive-button" onclick="updateProfileData()">Save</button>
+                <button class="negative-button" onclick=" closeModal('edit')">Cancel</button>
+                <button id="submitProfileButton" class="positive-button" type="submit">Save</button>
             </div>
         </div>
-
 
         <div class="logout-alert modal-card">
             <div>
@@ -88,18 +89,21 @@
 
     <main class="main">
         <header class="presentation">
-            <img src="https://i1.sndcdn.com/visuals-000082001451-u9TvPZ-t1240x260.jpg" alt="User Presentation Image" loading="lazy">
+            <img  id="userPresentationImage" src="" alt="User Presentation Image" loading="lazy">
         </header>
         <section class="user-section">
             <section class="user-section-top">
                 <div class="user-img-c-base">
                     <div class="user-img-c">
-                        <img id="userImage" src="https://static.vecteezy.com/system/resources/previews/023/465/800/original/remove-contact-dark-mode-glyph-ui-icon-delete-unwanted-user-address-book-user-interface-design-white-silhouette-symbol-on-black-space-solid-pictogram-for-web-mobile-isolated-illustration-vector.jpg" alt="User profile Image" loading="lazy">
+                        <img id="userProfileImage" src="" alt="User profile Image" loading="lazy">
                     </div>
                 </div>
                 <div class="top-left">
-                    <h1 id="userNameH1">AlexDev_Official</h1>
-                    <p>Coder</p>
+                    <h1 id="userNameH1">Loading...</h1>
+                    <p id="roleParagraph"></p>
+                </div>
+                <div class="description-c">
+                    <p id="descriptionParagraph">Loading...</p>
                 </div>
                 <div class="top-right">
                     <button class="edit-button" onclick="dropModal('edit')">Edit</button>

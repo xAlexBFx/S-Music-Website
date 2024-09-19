@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
+import Mongoose from "mongoose";
 
-const UserSchema = new mongoose.Schema({
+const UserSchema = new Mongoose.Schema({
     username: {
         type: String,
         required: true,
@@ -37,6 +37,20 @@ const UserSchema = new mongoose.Schema({
     role: {
         type: String,
     },
+    profileImage: {
+        filename: String,
+        contentType: String,
+        imageUrl: String
+    },
+    presentationImage: {
+        filename: String,
+        contentType: String,
+        imageUrl: String
+    },
+    songs: [{
+        type: Mongoose.Schema.Types.ObjectId,
+        ref: 'Song',
+    }],
     settings: {
         language: {
             type: String,
@@ -48,4 +62,4 @@ const UserSchema = new mongoose.Schema({
     timestamps: true,
 })
 
-export default mongoose.model('User', UserSchema);
+export default Mongoose.model('User', UserSchema);

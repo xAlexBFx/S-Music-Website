@@ -15,5 +15,6 @@ router.get('/feed', authRequired , validEmailRequired, (req, res) => { res.sendF
 
 router.get('/profile', authRequired , validEmailRequired, (req, res) => { res.sendFile(path.join(coreDirName, 's-client', 'profile', 'profile.html')) })
 router.get('/settings', authRequired , validEmailRequired, (req, res) => { res.sendFile(path.join(coreDirName, 's-client', 'settings', 'settings.html')) })
+router.get('/create', authRequired , validEmailRequired, (req, res) => { res.sendFile(path.join(coreDirName, 's-client', 'create', 'create.html')) })
 
 export default router;

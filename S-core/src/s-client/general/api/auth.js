@@ -1,6 +1,6 @@
 const serverURI = 'http://10.0.0.116:8080'
 
-export const registerReq = async (form) => {
+export const registerReq = async form => {
     try {
         fetch(`${serverURI}/api/register`, {
             method: 'POST',
@@ -26,9 +26,7 @@ export const registerReq = async (form) => {
     }
 }
 
-
-
-export const loginReq = async (form) => {
+export const loginReq = async form => {
     try {
         fetch(`${serverURI}/api/login`, {
             method: 'POST',
@@ -54,8 +52,7 @@ export const loginReq = async (form) => {
     }
 }
 
-
-export const logoutReq = async (form) => {
+export const logoutReq = async () => {
     try {
         fetch(`${serverURI}/api/logout`, {
             method: 'POST',
@@ -77,7 +74,7 @@ export const logoutReq = async (form) => {
     }
 }
 
-export const emailValidationRequest = async (code) => {
+export const emailValidationRequest = async code => {
     try {
         fetch(`${serverURI}/api/validate-email`, {
             method: 'POST',

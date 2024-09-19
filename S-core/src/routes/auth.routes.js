@@ -8,13 +8,13 @@ import rateLimit from 'express-rate-limit';
 const loginLimiter = rateLimit({
     windowMs: 15 * 60 * 1000,
     max: 5,
-    message: "Too many login attempts from this IP, please try again after 15 minutes"
+    message: 'Too many login attempts from this IP, please try again after 15 minutes'
 });
 
 const registerLimiter = rateLimit({
     windowMs: 35 * 60 * 1000,
     max: 2,
-    message: "Too many register attempts from this IP, please try again after 30 minutes"
+    message: 'Too many register attempts from this IP, please try again after 30 minutes'
 });
 
 const router = Router();
