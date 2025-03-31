@@ -5,7 +5,7 @@ An AI based music application.
 ## Features
 
 - High security & encrypted data.
-- AI friend who understands music and tastes more than yourself.
+- AI friend who understands music and your tastes more than yourself. (Not implemented yet)
 - A total reactive app based in emotions, songs and enviroments.
 - Minimalistic, Modern & simple design.
 - Database, API & Frontend included.
