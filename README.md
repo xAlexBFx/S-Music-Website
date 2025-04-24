@@ -12,11 +12,11 @@ An AI based music application.
 
 
 ## Technologies
--HTML
--CSS
--JavaScript
--NodeJS
--MongoDB
+- HTML
+- CSS
+- JavaScript
+- NodeJS
+- MongoDB
 
 
 ## Installation
