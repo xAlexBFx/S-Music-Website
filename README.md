@@ -10,6 +10,15 @@ An AI based music application.
 - Minimalistic, Modern & simple design.
 - Database, API & Frontend included.
 
+
+## Technologies
+-HTML
+-CSS
+-JavaScript
+-NodeJS
+-MongoDB
+
+
 ## Installation
 ```bash
 # Clone the repository
